@@ -2,6 +2,8 @@
 //
 
 int PIR = 2;
+int minValPin = 3;
+int maxValPin = 4;
 
 
 void setup()
@@ -9,7 +11,7 @@ void setup()
   Serial.begin(9600);
   
   pinMode(PIR, INPUT);
-  for(int i = 3; i <= 4; i++)
+  for(int i = minValPin; i <= maxValPin; i++)
   {
     pinMode(i, OUTPUT);
   }
@@ -25,7 +27,7 @@ void loop()
     // I use for loop here because I want to light up multiple leds.
     // If you only want to light up the one corresponding to the value of dice,
     // you don't have to use for loop
-    for(int i = 3; i <= dice; i++)
+    for(int i = minValPin; i <= dice; i++)
     {
       digitalWrite(i, HIGH);
     }
