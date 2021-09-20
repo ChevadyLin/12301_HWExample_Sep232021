@@ -2,8 +2,6 @@
 //
 
 int PIR = 2;
-unsigned long timer1;
-unsigned long timer2;
 
 
 void setup()
